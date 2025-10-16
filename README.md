@@ -25,15 +25,26 @@ By the end of this project, you'll have created a working AI memory system that:
 - Willingness to learn new concepts
 - A computer that can run local AI models
 
-## 🚀 Choose Your Path
+## 🚀 Choose Your Language
 
-This tutorial supports multiple programming languages and complexity levels:
+Pick the language you're most comfortable with - they all teach the same core concepts:
 
-| Level | Language | What You'll Learn |
-|-------|----------|-------------------|
-| 🟢 **Beginner** | Python | Basic embeddings, simple storage, MCP tools |
-| 🟡 **Intermediate** | TypeScript | Vector databases, metadata filtering, async operations |
-| 🔴 **Advanced** | Go | Dual-database architecture, graph relationships, production patterns |
+| Language | What's Included |
+|----------|-----------------|
+| **Python** | Starter template with TODOs |
+| **TypeScript** | Starter template + working example |
+
+## 📊 Project Levels
+
+All students build the same **core project** (SQLite, embeddings, semantic search). Then you can add optional extensions:
+
+| Level | Core Features | Optional Extensions |
+|-------|--------------|---------------------|
+| **Core Project** | • SQLite storage<br>• Embeddings (local)<br>• Semantic search<br>• MCP integration | Everyone completes this |
+| **Intermediate** | Same core + | • Metadata filtering<br>• Multiple collections<br>• Delete/list tools |
+| **Advanced** | Same core + | • Qdrant vector database<br>• Neo4j graph relationships<br>• Docker deployment<br>• Production patterns |
+
+See [Advanced Production Guide](docs/07-advanced-production.md) for Qdrant/Neo4j/Docker setup.
 
 ## 📚 Project Structure
 
@@ -49,8 +60,8 @@ examples/          # Working examples to reference
 1. **[Look at the Working Example](examples/basic-typescript-example/)** - See what success looks like
 2. **[Read the Concepts](docs/01-concepts.md)** - Understand embeddings and MCP
 3. **Copy a Template** - Start your own implementation:
-   - [Python Template](starter-templates/python-template/) - Beginner-friendly
-   - [TypeScript Template](starter-templates/typescript-template/) - Intermediate
+   - [Python Template](starter-templates/python-template/)
+   - [TypeScript Template](starter-templates/typescript-template/)
 
 ## 🛤️ Learning Path
 
