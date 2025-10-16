@@ -9,7 +9,7 @@ This guide will walk you through installing everything you need to build your AI
 ## 📋 What We're Installing
 
 1. **NVM (Node Version Manager)** - Manage Node.js versions professionally
-2. **Node.js** - JavaScript runtime (for TypeScript)
+2. **Node.js** - JavaScript runtime (required for TypeScript, optional for Python)
 3. **LM Studio** - Local AI model runner (no API costs!)
 4. **AI Models** - Embedding model + LLM for testing
 5. **Git** - Version control
@@ -174,7 +174,7 @@ Before starting the server, configure settings (click the ⚙️ **Settings** bu
 - **Allow MCP**: Set to **"Remote"** if you want to use MCP features
 - **Server Port**: Leave as `1234` (default)
 
-> 💡 **Important:** You MUST enable CORS for your TypeScript code to connect to LM Studio's API!
+> 💡 **Important:** You MUST enable CORS for your code to connect to LM Studio's API!
 
 ### Start the Server
 
@@ -244,18 +244,27 @@ cd C:\personal\projects  # Windows
 # or
 cd ~/projects  # Mac/Linux
 
-# Clone the starter template
-git clone https://github.com/yourusername/mcp-memory-starter.git
-cd mcp-memory-starter/starter-templates/typescript-template
+# Clone the starter repository
+git clone https://github.com/Matz-Mudah/mcp-memory-starter.git
+cd mcp-memory-starter
 
-# Install dependencies
+# Choose your language and navigate to template:
+cd starter-templates/typescript-template  # For TypeScript
+# OR
+cd starter-templates/python-template      # For Python
+
+# Install dependencies (TypeScript)
 npm install
+# OR
+# Install dependencies (Python)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
 ### Project Structure
 
-You should see:
-
+**TypeScript template:**
 ```
 typescript-template/
 ├── src/
@@ -263,8 +272,18 @@ typescript-template/
 │   ├── tools/            # MCP tools (store, search)
 │   └── storage/          # Database logic
 ├── package.json          # Dependencies
-├── tsconfig.json         # TypeScript config
-└── README.md             # Instructions
+└── tsconfig.json         # TypeScript config
+```
+
+**Python template:**
+```
+python-template/
+├── src/
+│   ├── server.py         # Main entry point
+│   ├── tools/            # MCP tools (store, search)
+│   └── storage/          # Database logic
+├── requirements.txt      # Dependencies
+└── .env.example          # Configuration template
 ```
 
 ---
@@ -303,14 +322,21 @@ curl http://localhost:1234/v1/embeddings \
 
 ✅ Should return JSON with an array of numbers (the embedding!)
 
-### Test 4: Build TypeScript
+### Test 4: Build Your Project
 
+**TypeScript:**
 ```bash
 cd typescript-template
 npm run build
 ```
-
 ✅ Should compile without errors
+
+**Python:**
+```bash
+cd python-template
+python -c "import mcp; print('✅ MCP SDK installed')"
+```
+✅ Should print success message
 
 ---
 
