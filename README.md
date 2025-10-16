@@ -48,7 +48,9 @@ examples/          # Working examples to reference
 
 1. **[Look at the Working Example](examples/basic-typescript-example/)** - See what success looks like
 2. **[Read the Concepts](docs/01-concepts.md)** - Understand embeddings and MCP
-3. **[Copy the Template](starter-templates/typescript-template/)** - Start your own implementation
+3. **Copy a Template** - Start your own implementation:
+   - [Python Template](starter-templates/python-template/) - Beginner-friendly
+   - [TypeScript Template](starter-templates/typescript-template/) - Intermediate
 
 ## 🛤️ Learning Path
 
