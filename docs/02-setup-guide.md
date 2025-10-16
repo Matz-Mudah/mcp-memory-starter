@@ -105,12 +105,14 @@ LM Studio runs AI models locally on your computer - no internet required, no API
 
 ## 3️⃣ Download AI Models
 
-We need **two models**:
+**You only need ONE model for the basic project:**
 
-1. **Embedding Model** - Converts text to numbers (for semantic search)
-2. **LLM** - For testing and optional features
+1. **Embedding Model** (Required) - Converts text to numbers (for semantic search)
+2. **LLM** (Optional) - Only needed for advanced features or testing with LM Studio
 
-### Download Embedding Model
+> 💡 **For this assignment, just download the embedding model!** The LLM is only needed if you're doing advanced extensions with Neo4j or want to test with LM Studio instead of Claude/Copilot.
+
+### Download Embedding Model (Required)
 
 **Recommended: embeddinggemma-300M (Smaller, Newer)**
 
@@ -124,7 +126,9 @@ We need **two models**:
 
 > - **embeddinggemma-300M** = Smaller, faster, still great quality!
 
-### Download LLM (For Testing)
+### Download LLM (Optional - Skip for Basic Project)
+
+**Only download if you're doing advanced features or want to test with LM Studio!**
 
 **Recommended: Qwen3-4B-Instruct-2507**
 
@@ -140,9 +144,11 @@ We need **two models**:
 
 Click **💾 My Models** (left sidebar) to see your downloaded models.
 
-You should have:
-- ✅ One embedding model (~329 MB)
-- ✅ One LLM (~2.5 GB)
+**For the basic project, you should have:**
+- ✅ One embedding model (~229 MB)
+
+**Optional (only if doing advanced features):**
+- One LLM (~2.5 GB)
 
 ---
 
@@ -158,10 +164,8 @@ Now let's make these models accessible via API!
    - Click "Select a model to load"
    - Choose your **embedding model** (`text-embedding-embeddinggemma-300m-qat`)
    - The model will show as "READY" when loaded
-4. **(Optional) Load the LLM:**
-   - You can load multiple models in the same Developer tab!
-   - Click "Select a model to load" again for a second slot
-   - Choose your **LLM** (`qwen/qwen3-4b-2507`)
+
+> 💡 **That's it!** You don't need to load the LLM for the basic project. You'll use Claude/Copilot as your AI assistant.
 
 ### Configure Server Settings
 
@@ -315,13 +319,9 @@ npm run build
 Create a `.env` file in your project root:
 
 ```bash
-# LM Studio Configuration
+# LM Studio Embedding API
 EMBEDDING_BASE_URL=http://localhost:1234/v1
 EMBEDDING_MODEL=text-embedding-embeddinggemma-300m-qat
-
-# Optional: LLM for testing
-LLM_BASE_URL=http://localhost:1235/v1
-LLM_MODEL=qwen/qwen3-4b-2507
 
 # Database
 DB_PATH=./data/memories.db
